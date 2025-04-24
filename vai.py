@@ -1,6 +1,3 @@
-from syllable_converter import convert_to_ipa, split_ipa_into_units, convert_ipa_to_syllables
-import re
-
 vai_syllabary = {
     "":     {"e": "ꔀ", "i": "ꔤ", "a": "ꕉ", "o": "ꕱ", "u": "ꖕ", "ɔ": "ꖺ", "ɛ": "ꗡ"},
     "̃":    {"e": "ꔁ", "i": "ꔥ", "a": "ꕊ", "o": "ꕲ", "u": "ꖖ", "ɔ": "ꖻ", "ɛ": "ꗢ"},
@@ -47,30 +44,21 @@ vai_syllabary = {
     "ɲ":    {"e": "ꔣ", "i": "ꕈ", "a": "ꕰ", "o": "ꖔ", "u": "ꖹ", "ɔ": "ꗠ", "ɛ": "ꘊ"}
 }
 
-# all consonants not in vai, but in IPA
-# are mapped to the closest vai consonant
 closest_consonant_mapping = {
-    "θ": "t",
-    "ð": "d",
-    "ʃ": "s",
-    "ʒ": "z",
-    "tʃ": "t",
-    "dʒ": "d",
-    "w": "h",
     "ɫ": "l",
-    "ŋ": "n",
-    "ɹ": "r",
-    "j": "y",
-    "h": "h",
-    "l": "l",
+    "ɹ": "r"
 }
 
-
-def convert_to_vai(text):
-    pass
-
-if __name__ == "__main__":
-    text = "Hello, how are you?"
-    vai_text = convert_to_vai(text)
-    print(f"Original text: {text}")
-    print(f"Vai text: {vai_text}")
+closest_vowel_mapping = {
+    "ɪ": "i",   # Near-close front unrounded vowel → "i" (close front unrounded vowel)
+    "ʊ": "u",   # Near-close back rounded vowel → "u" (close back rounded vowel)
+    "ə": "ɛ",   # Schwa → "ɛ" (similar mid vowel)
+    "ɝ": "ɛ",   # Rhotic schwa → "ɛ" (closest mid vowel)
+    "æ": "a",   # Near-open front unrounded vowel → "a" (open front unrounded vowel)
+    "ɑ": "a",   # Open back unrounded vowel → "a" (open front unrounded vowel)
+    "eɪ": "e",  # Diphthong → "e" (similar starting point)
+    "aɪ": "a",  # Diphthong → "a" (similar starting point)
+    "aʊ": "a",  # Diphthong → "a" (similar starting point)
+    "ɔɪ": "ɔ",  # Diphthong → "ɔ" (similar starting point)
+    "oʊ": "o",  # Diphthong → "o" (similar starting point)
+}
