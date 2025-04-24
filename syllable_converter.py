@@ -2,21 +2,16 @@ import eng_to_ipa as ipa
 import re
 from unit import Unit
 
-ipa_consonants = ["p", "b", "t", "d", "k", "g", "θ", "ð", "f", "v", "s", "z", "ʃ", "ʒ", "tʃ", "dʒ", "w", "ɫ", "m", "n", "ŋ", "ɹ", "j", "h", "l", "r"]
-ipa_vowels = ["i", "u", "ɪ", "ʊ", "ə", "ɛ", "ɝ", "ɔ", "æ", "ɑ", "eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ"]
-
 def convert_to_ipa(text):
     ipa_text = ipa.convert(text)
     # remove ˈ
     ipa_text = re.sub(r"ˈ", "", ipa_text)
     return ipa_text
 
-def split_ipa_into_units(ipa_text):
+def split_ipa_into_units(ipa_text, diphthongs, consonant_clusters):
     """
     Splits IPA text into individual characters, diphthongs, and consonant clusters.
     """
-    diphthongs = ["eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ"]
-    consonant_clusters = ["tʃ", "dʒ", "ŋg", "ndʒ", "kp", "gb"]  # Add other clusters as needed
     units = []
     i = 0
     while i < len(ipa_text):
@@ -33,7 +28,7 @@ def split_ipa_into_units(ipa_text):
             i += 1
     return units
 
-def convert_ipa_to_syllables(ipa_units):
+def convert_ipa_to_syllables(ipa_units, ipa_consonants, ipa_vowels):
     syllables = []
     
     i = 0
@@ -87,10 +82,20 @@ def syllable_map(units, syllable_mapping):
 
     return text
 
-def full_conversion(text, consonant_map, vowel_map, syllable_mapping):
+def full_conversion(text, consonant_map, vowel_map, syllable_mapping, ipa_consonants, ipa_vowels, diphthongs, consonant_clusters):
     ipa_text = convert_to_ipa(text)
-    ipa_units = split_ipa_into_units(ipa_text)
-    syllables = convert_ipa_to_syllables(ipa_units)
-    closest_chars(syllables, consonant_map, vowel_map)
+    ipa_units = split_ipa_into_units(ipa_text, diphthongs, consonant_clusters)
+    syllables = convert_ipa_to_syllables(ipa_units, ipa_consonants, ipa_vowels)
+
+    for unit in syllables:
+        print(unit, end=" ")
+    print()
+
+    syllables = closest_chars(syllables, consonant_map, vowel_map)
+
+    for unit in syllables:
+        print(unit, end=" ")
+    print()
+
     final_text = syllable_map(syllables, syllable_mapping)
     return final_text
