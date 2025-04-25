@@ -21,14 +21,3 @@ def convert_to_vai(text):
 def convert_to_cherokee(text):
     cherokee_text = full_conversion(text, closest_consonant_mapping_cherokee, closest_vowel_mapping_cherokee, cherokee_syllabary, ipa_consonants_cherokee, ipa_vowels_cherokee, diphthongs_cherokee, consonant_clusters_cherokee)
     return cherokee_text
-
-
-if __name__ == "__main__":
-    text = "quotient"
-    vai_text = convert_to_vai(text)
-    print(vai_text)
-
-    print()
-
-    cherokee_text = convert_to_cherokee(text)
-    print(cherokee_text)
