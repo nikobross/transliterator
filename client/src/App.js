@@ -1,22 +1,12 @@
-import React, { useState } from 'react';
-import './App.css';
+import React from 'react';
+import './css/App.css';
+import './css/Textbox.css';
+import TextboxWithButton from './components/TextboxWithButton';
 
 function App() {
-  const [text, setText] = useState('');
-
-  const handleChange = (event) => {
-    setText(event.target.value);
-  };
-
   return (
-    <div className="default-textbox">
-      <textarea
-        value={text}
-        onChange={handleChange}
-        placeholder="Enter your text here..."
-        rows="10"
-        cols="50"
-      />
+    <div>
+      <TextboxWithButton />
     </div>
   );
 }

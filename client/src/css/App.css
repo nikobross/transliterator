@@ -1,0 +1,8 @@
+body {
+  margin: 0; /* Remove default margin */
+  overflow: hidden; /* Disable scrolling */
+}
+
+html {
+  overflow: hidden; /* Disable scrolling */
+}

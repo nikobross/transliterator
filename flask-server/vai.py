@@ -54,7 +54,8 @@ vai_syllabary = {
 
 closest_consonant_mapping = {
     "ɫ": "l",
-    "ɹ": "r"
+    "ɹ": "r",
+    "y": "j",
 }
 
 closest_vowel_mapping = {
@@ -71,7 +72,7 @@ closest_vowel_mapping = {
     "oʊ": "o",  # Diphthong → "o" (similar starting point)
 }
 
-ipa_consonants_vai = ["p", "b", "t", "d", "k", "g", "θ", "ð", "f", "v", "s", "z", "ʃ", "ʒ", "tʃ", "dʒ", "w", "ɫ", "m", "n", "ŋ", "ɹ", "j", "h", "l", "r", "ŋg", "ndʒ", "kp", "gb"]
-ipa_vowels_vai = ["i", "u", "ɪ", "ʊ", "ə", "ɛ", "ɝ", "ɔ", "æ", "ɑ", "eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ"]
+ipa_consonants_vai = ["p", "b", "t", "d", "k", "g", "θ", "ð", "f", "v", "s", "z", "ʃ", "ʒ", "tʃ", "dʒ", "w", "ɫ", "m", "n", "ŋ", "ɹ", "j", "h", "l", "r", "ŋg", "ndʒ", "kp", "gb", "ʧ", "ʤ", "y"]
+ipa_vowels_vai = ["i", "u", "ɪ", "ʊ", "ə", "ɛ", "ɝ", "ɔ", "æ", "ɑ", "eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ", "a", "e"]
 diphthongs_vai = ["eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ"]
 consonant_clusters_vai = ["tʃ", "dʒ", "ŋg", "ndʒ", "kp", "gb"]

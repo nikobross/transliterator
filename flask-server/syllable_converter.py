@@ -6,6 +6,9 @@ def convert_to_ipa(text):
     ipa_text = ipa.convert(text)
     # remove ˈ
     ipa_text = re.sub(r"ˈ", "", ipa_text)
+    # remove ˌ
+    ipa_text = re.sub(r"ˌ", "", ipa_text)
+    ipa_text = re.sub(r"[^a-zA-Zˈˌʔʊɪəɛɔʌʊɑɹɾʃʒθðŋɲʧʤʔ ]", "", ipa_text)
     return ipa_text
 
 def split_ipa_into_units(ipa_text, diphthongs, consonant_clusters):
@@ -69,6 +72,7 @@ def closest_chars(units, consonant_map, vowel_map):
             unit.type = "CV"  # Update the type to CV
         elif unit.is_V():
             unit.vowel = vowel_map.get(unit.vowel, unit.vowel)
+            unit.consonant = ""
 
     return units
 
@@ -88,7 +92,7 @@ def full_conversion(text, consonant_map, vowel_map, syllable_mapping, ipa_conson
     syllables = convert_ipa_to_syllables(ipa_units, ipa_consonants, ipa_vowels)
 
     for unit in syllables:
-        print(unit, end=" ")
+        print(f"{unit.type}: {unit}", end=" ")
     print()
 
     syllables = closest_chars(syllables, consonant_map, vowel_map)

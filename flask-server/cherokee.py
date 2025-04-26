@@ -34,6 +34,10 @@ closest_consonant_mapping = {
     "ɹ": "l",     # American English 'r' approximated by "l" or "d"
     "r": "l",     # American English 'r' approximated by "l" or "d"
     "j": "y",     # palatal glide matches Cherokee "y"
+    "ʧ": "ts",  # voiceless postalveolar affricate approximated by "ts"
+    "ʤ": "ts",  # voiced postalveolar affricate approximated by "ts"
+    "b": "d",     # voiced bilabial approximated by "p"
+    "p": "t",     # voiceless bilabial approximated by "t"
 }
 
 closest_vowel_mapping = {
@@ -52,7 +56,7 @@ closest_vowel_mapping = {
     "ɛ": "e",     # open-mid front unrounded approximated by "e"
 }
 
-ipa_consonants_cherokee = ["p", "b", "t", "d", "k", "g", "θ", "ð", "f", "v", "s", "z", "ʃ", "ʒ", "tʃ", "dʒ", "w", "ɫ", "m", "n", "ŋ", "ɹ", "j", "h", "l", "r", "hn", "nah", "qu", "dl", "tl", "ts"]
-ipa_vowels_cherokee = ["i", "u", "ɪ", "ʊ", "ə", "ɛ", "ɝ", "ɔ", "æ", "ɑ", "eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ"]
+ipa_consonants_cherokee = ["p", "b", "t", "d", "k", "g", "θ", "ð", "f", "v", "s", "z", "ʃ", "ʒ", "tʃ", "dʒ", "w", "ɫ", "m", "n", "ŋ", "ɹ", "j", "h", "l", "r", "hn", "nah", "qu", "dl", "tl", "ts", "ʧ", "ʤ", "y"]
+ipa_vowels_cherokee = ["i", "u", "ɪ", "ʊ", "ə", "ɛ", "ɝ", "ɔ", "æ", "ɑ", "eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ", "a", "e"]
 diphthongs_cherokee = ["eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ"]
 consonant_clusters_cherokee = ["tʃ", "dʒ", "hn", "nah", "qu", "dl", "tl", "ts"]
