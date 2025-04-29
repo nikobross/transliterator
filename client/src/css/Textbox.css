@@ -1,41 +1,102 @@
+.title {
+  font-family: Arial, sans-serif;
+  font-size: 36px; /* Large font size for the title */
+  font-weight: bold;
+  color: #01204E; /* Oxford blue text color */
+  margin-bottom: 40px; /* Space below the title */
+  text-align: center;
+}
+
 .default-textbox {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh; /* Full viewport height */
-  background-color: #f0f0f0; /* Light background */
+  background-color: #F3E2C4; /* Slightly warmer and darker Peach Yellow background */
 }
 
 textarea {
   font-family: Arial, sans-serif;
-  font-size: 16px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  font-size: 20px; /* Increased font size */
+  padding: 15px; /* Increased padding */
+  border: 2px solid #F85525; /* Giants orange border */
+  border-radius: 6px; /* Slightly larger border radius */
   resize: none; /* Disable resizing */
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* Increased margin */
+  width: 100%; /* Full width of the container */
+  max-width: 600px; /* Increased max width */
+  box-sizing: border-box; /* Include padding and border in width */
+  background-color: #FFF8E7; /* Light cream background for text area */
+  color: #01204E; /* Oxford blue text color */
 }
 
 button {
   font-family: Arial, sans-serif;
-  font-size: 16px;
-  padding: 10px 20px;
+  font-size: 18px; /* Increased font size */
+  padding: 15px 30px; /* Increased padding */
   border: none;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: white;
+  border-radius: 6px; /* Slightly larger border radius */
+  background-color: #FAA968; /* Sandy brown background (lighter color) */
+  color: #01204E; /* Oxford blue text */
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Small shadow for buttons */
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #F85525; /* Giants orange on hover */
+  color: #FFFFFF; /* White text on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
 }
 
 .result-box {
-  margin-top: 20px;
+  margin-top: 25px; /* Increased margin */
   font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: #333;
+  font-size: 36px; /* Increased font size */
+  color: #01204E; /* Oxford blue text color */
   white-space: pre-wrap; /* Preserve line breaks */
+}
+
+.language-selector {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  margin-bottom: 15px; /* Increased padding between buttons and text box */
+  width: 100%; /* Match the width of the text box */
+  max-width: 600px; /* Same max width as the text box */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+.language-selector button {
+  font-family: Arial, sans-serif;
+  font-size: 18px; /* Increased font size */
+  padding: 15px 0; /* Increased padding for equal height */
+  flex: 1; /* Make buttons equal in size */
+  border: 2px solid #F85525; /* Giants orange border */
+  /* border: none; No border for buttons */
+  border-radius: 6px; /* Slightly larger border radius */
+  background-color: #FFF4E1; /* Lighter Peach yellow background for default */
+  color: #01204E; /* Oxford blue text color */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Small shadow for buttons */
+}
+
+.language-selector button:hover {
+  background-color: #FFF4E1; /* Sandy brown on hover */
+  /* color: #FFFFFF; White text on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+}
+
+.language-selector button.active {
+  background-color: #F85525; /* Giants orange for active button */
+  color: #FFFFFF; /* White text for active button */
+  cursor: default;
+}
+
+.language-selector button:disabled {
+  background-color: #F85525; /* Giants orange for disabled button */
+  color: #FFFFFF; /* White text for disabled button */
+  cursor: not-allowed;
 }

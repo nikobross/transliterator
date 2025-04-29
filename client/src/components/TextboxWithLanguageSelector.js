@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 
-function TextboxWithButton() {
+function TextboxWithLanguageSelector() {
+  const [selectedLanguage, setSelectedLanguage] = useState('cherokee');
   const [text, setText] = useState('');
   const [result, setResult] = useState('');
+
+  const handleLanguageChange = (language) => {
+    setSelectedLanguage(language);
+  };
 
   const handleChange = (event) => {
     setText(event.target.value);
@@ -10,7 +15,7 @@ function TextboxWithButton() {
 
   const handleConvert = async () => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/cherokee/${encodeURIComponent(text)}`);
+      const response = await fetch(`http://127.0.0.1:5000/${selectedLanguage}/${encodeURIComponent(text)}`);
       if (response.ok) {
         const data = await response.text();
         console.log('Conversion result:', data);
@@ -27,6 +32,23 @@ function TextboxWithButton() {
 
   return (
     <div className="default-textbox">
+      <h1 className="title">Transliteramajig</h1>
+      <div className="language-selector">
+        <button
+          className={selectedLanguage === 'cherokee' ? 'active' : ''}
+          onClick={() => handleLanguageChange('cherokee')}
+          disabled={selectedLanguage === 'cherokee'}
+        >
+          Cherokee
+        </button>
+        <button
+          className={selectedLanguage === 'vai' ? 'active' : ''}
+          onClick={() => handleLanguageChange('vai')}
+          disabled={selectedLanguage === 'vai'}
+        >
+          Vai
+        </button>
+      </div>
       <textarea
         value={text}
         onChange={handleChange}
@@ -40,4 +62,4 @@ function TextboxWithButton() {
   );
 }
 
-export default TextboxWithButton;
+export default TextboxWithLanguageSelector;

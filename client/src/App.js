@@ -1,12 +1,12 @@
 import React from 'react';
 import './css/App.css';
 import './css/Textbox.css';
-import TextboxWithButton from './components/TextboxWithButton';
+import TextboxWithLanguageSelector from './components/TextboxWithLanguageSelector';
 
 function App() {
   return (
     <div>
-      <TextboxWithButton />
+      <TextboxWithLanguageSelector />
     </div>
   );
 }

@@ -9,6 +9,7 @@ def convert_to_ipa(text):
     # remove ˌ
     ipa_text = re.sub(r"ˌ", "", ipa_text)
     ipa_text = re.sub(r"[^a-zA-Zˈˌʔʊɪəɛɔʌʊɑɹɾʃʒθðŋɲʧʤʔ ]", "", ipa_text)
+    print(f"IPA text: {ipa_text}")
     return ipa_text
 
 def split_ipa_into_units(ipa_text, diphthongs, consonant_clusters):
@@ -29,6 +30,9 @@ def split_ipa_into_units(ipa_text, diphthongs, consonant_clusters):
         else:
             units.append(ipa_text[i])  # Add the single character
             i += 1
+
+    print(f"IPA units: {units}")
+
     return units
 
 def convert_ipa_to_syllables(ipa_units, ipa_consonants, ipa_vowels):
@@ -58,6 +62,16 @@ def convert_ipa_to_syllables(ipa_units, ipa_consonants, ipa_vowels):
             syllables.append(Unit("unique symbol", None, None, unit))
         
         i += 1
+
+    for syllable in syllables:
+        if syllable.is_CV():
+            print(f"CV: {syllable}")
+        elif syllable.is_C():
+            print(f"C: {syllable}")
+        elif syllable.is_V():
+            print(f"V: {syllable}")
+        else:
+            print(f"Unique symbol: {syllable}") 
 
     return syllables
 

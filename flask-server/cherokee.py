@@ -57,6 +57,6 @@ closest_vowel_mapping = {
 }
 
 ipa_consonants_cherokee = ["p", "b", "t", "d", "k", "g", "θ", "ð", "f", "v", "s", "z", "ʃ", "ʒ", "tʃ", "dʒ", "w", "ɫ", "m", "n", "ŋ", "ɹ", "j", "h", "l", "r", "hn", "nah", "qu", "dl", "tl", "ts", "ʧ", "ʤ", "y"]
-ipa_vowels_cherokee = ["i", "u", "ɪ", "ʊ", "ə", "ɛ", "ɝ", "ɔ", "æ", "ɑ", "eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ", "a", "e"]
+ipa_vowels_cherokee = ["i", "u", "ɪ", "ʊ", "ə", "ɛ", "ɝ", "ɔ", "æ", "ɑ", "eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ", "a", "e", "o"]
 diphthongs_cherokee = ["eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ"]
 consonant_clusters_cherokee = ["tʃ", "dʒ", "hn", "nah", "qu", "dl", "tl", "ts"]

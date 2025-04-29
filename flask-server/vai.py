@@ -73,6 +73,6 @@ closest_vowel_mapping = {
 }
 
 ipa_consonants_vai = ["p", "b", "t", "d", "k", "g", "θ", "ð", "f", "v", "s", "z", "ʃ", "ʒ", "tʃ", "dʒ", "w", "ɫ", "m", "n", "ŋ", "ɹ", "j", "h", "l", "r", "ŋg", "ndʒ", "kp", "gb", "ʧ", "ʤ", "y"]
-ipa_vowels_vai = ["i", "u", "ɪ", "ʊ", "ə", "ɛ", "ɝ", "ɔ", "æ", "ɑ", "eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ", "a", "e"]
+ipa_vowels_vai = ["i", "u", "ɪ", "ʊ", "ə", "ɛ", "ɝ", "ɔ", "æ", "ɑ", "eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ", "a", "e", "o"]
 diphthongs_vai = ["eɪ", "aɪ", "aʊ", "ɔɪ", "oʊ"]
 consonant_clusters_vai = ["tʃ", "dʒ", "ŋg", "ndʒ", "kp", "gb"]
