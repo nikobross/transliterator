@@ -56,6 +56,8 @@ closest_consonant_mapping = {
     "ɫ": "l",
     "ɹ": "r",
     "y": "j",
+    "ʤ": "dʒ",  # Voiced postalveolar affricate approximated by "dʒ"
+    "ŋ": "ŋg",  # Velar nasal approximated by "ŋg"
 }
 
 closest_vowel_mapping = {
