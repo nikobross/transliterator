@@ -1,11 +1,3 @@
-"""
-꘍	comma (,)
-꘎	period (.)
-꘎꘎	exclamation mark (!)
-꘏	question mark (?)
-
-"""
-
 vai_syllabary = {
     "":     {"e": "ꔀ", "i": "ꔤ", "a": "ꕉ", "o": "ꕱ", "u": "ꖕ", "ɔ": "ꖺ", "ɛ": "ꗡ"},
     "̃":    {"e": "ꔁ", "i": "ꔥ", "a": "ꕊ", "o": "ꕲ", "u": "ꖖ", "ɔ": "ꖻ", "ɛ": "ꗢ"},
@@ -53,9 +45,9 @@ vai_syllabary = {
 }
 
 closest_consonant_mapping = {
-    "ɫ": "l",
-    "ɹ": "r",
-    "y": "j",
+    "ɫ": "l",  # Velarized "l" approximated by plain "l"
+    "ɹ": "r",   # American English 'ɹ' approximated by "r"
+    "y": "j",   # Palatal glide approximated by "j"
     "ʤ": "dʒ",  # Voiced postalveolar affricate approximated by "dʒ"
     "ŋ": "ŋg",  # Velar nasal approximated by "ŋg"
 }
